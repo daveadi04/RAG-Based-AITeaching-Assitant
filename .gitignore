@@ -1,0 +1,6 @@
+# Ignore folders
+audios/
+videos/
+__pycache__/
+venv/
+.env
