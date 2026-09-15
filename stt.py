@@ -1,4 +1,5 @@
 #for trabnslating speach to text
+#sample for testing using the smallest mp3 file in the audios folder
 import whisper
 import json
 
