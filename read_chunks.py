@@ -1,5 +1,7 @@
 #creating chunks of text and sending them to the API for embeddings
 import requests
+import json
+import os
 
 #creating a function to create embeddings for a given text
 def create_embedding(text):
@@ -11,5 +13,14 @@ def create_embedding(text):
 
     return embedding
 
-a = create_embedding ("cat sat on the mat.")
-print(a)
+jsons  = os.listdir("json")
+# print(jsons)
+for json_file in jsons:
+    with open(f"json/{json_file}") as f:
+        content = json.load(f)
+    for chunk in content['chunks']:
+        print(chunk)
+    break
+
+# a = create_embedding ("cat sat on the mat.")
+# print(a)
