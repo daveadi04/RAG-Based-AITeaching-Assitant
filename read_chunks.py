@@ -1,6 +1,7 @@
 #creating chunks of text and sending them to the API for embeddings
 import requests
 
+#creating a function to create embeddings for a given text
 def create_embedding(text):
     r = requests.post("http://localhost:11434/api/embeddings", json={
         "model": "bge-m3",
