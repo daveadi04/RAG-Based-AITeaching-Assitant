@@ -37,6 +37,9 @@ for json_file in jsons:
         chunk["embedding"] = embeddings[i]
         chunk_id += 1
         my_dicts.append(chunk)
+        if(i==5):# stopping after 5 chunks for testing
+            break
+    break # breaking after first file for testing
 
 df = pd.DataFrame.from_records(my_dicts)
 
